@@ -5,7 +5,7 @@ from Tools.Directories import resolveFilename, SCOPE_PLUGINS
 
 
 PluginLanguageDomain = "lamedbmerge"
-PluginLanguagePath = "SystemPlugins/LamebdMerge/locale"
+PluginLanguagePath = "Extensions/LamebdMerge/locale"
 
 
 def pluginlanguagedomain():
