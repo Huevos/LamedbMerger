@@ -612,12 +612,13 @@ class LamedbMerger(ConfigListScreen, Screen):
 		self.skinName = ["LamedbMerger", "Setup"]
 		self_checkMsg = _("Check file exists")
 		self["key_green"] = StaticText(self_checkMsg)
+		self["key_red"] = StaticText(_("Cancel"))
 		self["description"] = StaticText()
 		self.tmpfile_path = ConfigText(default="/tmp/", fixed_size=False)
 		self.list = [
 			getConfigListEntry(_("Location"), self.tmpfile_path, _("Location of the lamedb file to merge into %s/lamedb.") % lamedb_path),
 			]
-		ConfigListScreen.__init__(self, self.list, on_change=None, fullUI=True)
+		ConfigListScreen.__init__(self, self.list)
 		self["actions"] = ActionMap(["CancelSaveActions"],
 		{
 			"save": self.keySave,
