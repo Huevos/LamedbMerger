@@ -619,7 +619,7 @@ class LamedbMerger(ConfigListScreen, Screen):
 			getConfigListEntry(_("Location"), self.tmpfile_path, _("Location of the lamedb file to merge into %s/lamedb.") % lamedb_path),
 			]
 		ConfigListScreen.__init__(self, self.list)
-		self["actions"] = ActionMap(["CancelSaveActions"],
+		self["actions"] = ActionMap(["SetupActions"],
 		{
 			"save": self.keySave,
 			"cancel": self.keyCancel,
